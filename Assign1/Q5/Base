@@ -1,0 +1,64 @@
+package devpack;
+/*
+ * 5)	Show the example of multi-level inheritance with constructor invocation.
+ */
+
+class Base
+{
+	private int num;
+	public  Base(int num)
+	{
+		System.out.println("in Base parameterised constructor");
+		this.num=num;
+	}
+	public int getNum() {
+		return num;
+	}
+}
+
+class Sub1 extends Base
+{
+	private int num1;
+	public Sub1(int num1)
+	{
+		super(25);
+		this.num1=num1;
+		System.out.println("in Sub1 class parameterised constructor");
+	}
+	public int getNum1() {
+		return num1;
+	}
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+}
+class Sub2 extends Sub1
+{
+	private int num2;
+	public Sub2()
+	{
+		super(50);
+		System.out.println("in Sub2 class no args constructor");
+	}
+	public Sub2(int num2)
+	{
+		super(50);
+		System.out.println("in Sub2 class parameterised constructor");
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2(int num2) {
+		this.num2 = num2;
+	}
+}
+public class Demo
+{
+	public static void main(String[]args)
+	{
+		Sub2 s1 = new Sub2();
+		s1.setNum2(100);
+	}
+}
+
+
