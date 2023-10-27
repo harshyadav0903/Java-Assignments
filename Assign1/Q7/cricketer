@@ -1,0 +1,43 @@
+7) Define a parent and a child class . Now explain function overriding with
+ Example
+ 
+
+class cricketer
+{
+	private String Name;
+	
+	public void disp()
+	{
+		System.out.println("play cricket");
+	}
+	
+}
+class batsman extends cricketer
+{
+	public void disp()
+	{
+		System.out.println("do batting");
+	}
+} 
+class bowler extends cricketer
+{
+	public void disp()
+	{
+		System.out.println("do Bowling");
+	}
+}
+class allRounder extends cricketer
+{
+	public void disp()
+	{
+		System.out.println("do batting as well as bowling");
+	}
+}
+public class Demo
+{
+	public static void main(String[] args) {
+		allRounder p1= new allRounder();
+		p1.disp();
+	}
+}
+
