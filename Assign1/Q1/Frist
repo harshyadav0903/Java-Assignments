@@ -1,0 +1,67 @@
+
+  1) Define 2 classes “First” and “Second” with member variables , member
+  functions and constructors of your choice. Now define a class “Two” in which
+  define main function . In main function create various instances of First and
+  Second and call their individual member functions.
+
+
+class First
+{
+	private int Marks;
+	private char Grade;
+	
+	public First()
+	{
+		this.Marks=0;
+		this.Grade='f';
+	}
+	public void setMarks(int marks) {
+		Marks = marks;
+	}
+	public int getMarks() {
+		return Marks;
+	}
+	public char getGrade() {
+		return Grade;
+	}
+	public void setGrade(char grade) {
+		Grade = grade;
+	}
+}
+class Second
+{
+	private int Marks;
+	private char Grade;
+	public Second(int Marks)
+	{
+		this.Marks=Marks;
+		this.Grade='f';
+	}
+	public int getMarks() {
+		return Marks;
+	}
+	public char getGrade() {
+		return Grade;
+	}
+	public void setGrade() {
+		if(this.Marks>75)
+		{
+			this.Grade='p';
+		}
+	}
+}
+public class Two
+{
+	public static void main(String [] args)
+	{
+		First s1=new First();
+		s1.setMarks(75);
+		s1.setGrade('P');
+		System.out.println(s1.getMarks()+"\t"+s1.getGrade());
+		Second m1= new Second(91);
+		m1.setGrade();
+		System.out.println(m1.getMarks()+"\t"+m1.getGrade());
+	}
+}
+
+
