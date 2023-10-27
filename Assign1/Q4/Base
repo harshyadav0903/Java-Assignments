@@ -1,0 +1,41 @@
+ 4)	Show the example of single level inheritance with constructor invocation
+ 
+
+class Base
+{
+	private int num;
+	public  Base(int num)
+	{
+		System.out.println("in Base parameterised constructor");
+		this.num=num;
+	}
+	public int getNum() {
+		return num;
+	}
+}
+
+class Sub extends Base
+{
+	private int num1;
+	public Sub()
+	{
+		super(25);
+		System.out.println("in Sub class no args constructor");
+	}
+	public int getNum1() {
+		return num1;
+	}
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+
+}
+public class Demo
+{
+	public static void main(String[]args)
+	{
+		Sub s1 = new Sub();
+		s1.setNum1(100);
+	}
+}
+
