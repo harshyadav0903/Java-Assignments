@@ -1,0 +1,31 @@
+2) Create a class with static and non-static member variables. Define static
+ and non-static member functions. Create instance of this class and call both
+ static and non-static member functions.
+
+
+class Myclass
+{
+private int num;
+private static int cnt=80;
+
+public int getNum() {
+	return num;
+}
+public void setNum(int num) {
+	this.num = num;
+}
+public static int getCnt() {
+	return cnt;
+}
+
+}
+public class Demo
+{
+	public static void main(String[]args)
+	{
+		System.out.println("total marks\t"+Myclass.getCnt());
+		Myclass m1=new Myclass();
+		m1.setNum(65);
+		System.out.println("obtain marks\t"+m1.getNum());
+	}
+}
